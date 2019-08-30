@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import { connect } from "react-redux";
+import { connect } from "react-redux";
 import SignUpModal from "./SignUpModal";
 import LogInModal from "./LogInModal";
 import Modal from "react-modal";
@@ -29,9 +29,11 @@ class Header extends React.Component {
           <header className="header fade-in-top">
             <nav className="nav">
 
+                <Link to="/" className="nav__link">
                 <img src="images/brain.png" className="nav__brand" alt="Patterns logo"></img>
+                </Link>
 
-              <div className="nav__home-links">
+                <div className="nav__home-links">
                 <Link to ="/"
                   className="nav__link"
                   activeclassname="is-active"
