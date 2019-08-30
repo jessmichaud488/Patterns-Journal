@@ -1,0 +1,137 @@
+.section {
+  margin: 0 auto;
+  position: relative;
+  width: 114rem;
+
+  @include respond-1050-width {
+    width: 100%;
+  }
+}
+
+.section--one {
+  height: 100vh;
+
+  &__text-box {
+    color: $white;
+    position: absolute;
+      top: 45%;
+      left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    @include respond-1050-width {
+      padding: 0 2rem;
+    }
+
+    .heading-primary--main {
+      font-family: 'Crete Round', serif;
+      font-size: $xxxl-font-size;
+      text-transform: uppercase;
+
+      @media (max-width: 31.0625em) {
+        font-family: 'Crete Round', serif;
+        font-size: $xxl-font-size;
+      }
+
+      @media (max-width: 25.3125em) {
+        font-family: 'Crete Round', serif;
+        font-size: $xl-font-size;
+      }
+    }
+
+    span {
+      display: block;
+      font-weight: 400;
+    }
+  }
+}
+
+.section--two {
+  text-align: center;
+
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+
+    @include respond-900-width {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: $white;
+      font-family: 'Crete Round', serif;
+      border-radius: 3px;
+      height: 32rem;
+      padding: 1.5rem;
+      position: relative;
+      text-align: center;
+      transition: all 0.5s;
+      width: 32rem;
+
+      @include respond-900-width {
+        margin: 0 auto;
+        margin-bottom: 10rem;    
+      }
+
+      &:hover {
+        transform: translateY(-3rem);
+      }
+
+      .img {
+        position: absolute;
+          left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &--1-img {      
+          top: -5rem;          
+        width: 13rem;
+      }
+
+      &--2-img {      
+          top: -5rem;          
+        width: 13rem;
+      }
+
+      &--3-img {      
+          top: -3rem;          
+        width: 18rem;
+      }
+
+      &__text-box {
+        position: absolute;
+          top: 70%;
+          left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+      }
+
+      &__main-text {
+        font-family: 'Crete Round', serif;
+        color: $dark-purple;
+        font-size: $l-font-size;
+        font-weight: 600;
+      }
+
+      &__sub-text {
+        color: $gray;
+        font-family: 'Crete Round', serif;
+        font-size: $default-font-size;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.heading-primary--main-desktop {
+  font-family: 'Crete Round', serif;
+  background-image: -webkit-gradient(linear, left top, right bottom, from($light-blue), to($light-green));
+  background-image: linear-gradient(to bottom right, $light-blue, $light-green);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heading-primary--main-mobile {
+  color: $light-blue;
+}

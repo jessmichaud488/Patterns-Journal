@@ -1,0 +1,31 @@
+.btn {
+  border: none;
+  font-family: 'Crete Round', serif;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: $l-font-size;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &--blue {
+    background: linear-gradient(to bottom right, $light-green 1%, $light-blue 50%, $dark-blue 100%);
+
+    &,
+    &:link,
+    &:visited {
+      color: $dark-blue;
+    }
+
+    &:hover{
+      color: $white;
+      transform: translateY(-1rem);
+    }
+  }
+}

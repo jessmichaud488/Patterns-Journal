@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond-1800-width {
+    font-size: 75%;
+  }
+
+  @include respond-1200-width {
+    font-size: 56.25%;
+  }
+
+  @include respond-900-width {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}

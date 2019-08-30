@@ -1,0 +1,99 @@
+.entry-list-filters {
+  display: flex;
+  justify-content: space-between;
+  animation-delay: .3s;
+
+  @include respond-1010-width {
+    display: block;
+    text-align: center;
+  }
+
+  & > * {
+    @include respond-1010-width {
+      margin: 0 2rem 2rem 2rem;
+    }
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 3rem;
+  }
+
+  .text-filter {
+    background-color: transparent;
+    border: 1px solid $light-gray;
+    border-radius: $input-radius;
+    color: $light-gray;
+    font-size: $m-font-size;
+    font-family: 'Crete Round', serif;
+    flex-grow: 1;
+    height: 4.8rem;
+    padding: $input-padding;
+    transition: all .4s;
+    width: $input-width;
+
+    @media (max-width: 41.5625em) {
+      margin: 0 0 2rem 0;
+      width: 100%;
+    }
+
+    &:focus {
+      background-color: rgba($light-blue, .1);
+      border-color: $light-blue;
+      color: $light-blue;
+      outline: none;
+
+      &::placeholder {
+        color: $light-blue;
+        opacity: 1
+      }
+
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $light-gray;
+      }
+
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $light-gray;
+      }
+    }
+
+    &::placeholder {
+      color: $light-gray;
+      opacity: 1
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $light-gray;
+    }
+
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: $light-gray;
+    }
+  }
+
+  .select {
+    background-color: transparent;
+    border: 1px solid $light-gray;
+    -webkit-appearance: none;
+    -webkit-border-radius: $input-radius;
+    color: $light-gray;
+    cursor: pointer;
+    font-family: 'Crete Round', serif;
+    font-size: $m-font-size;
+    height: 4.8rem;
+    padding: $input-padding;
+    transition: all .4s;
+    width: $input-width;
+
+    @media (max-width: 41.5625em) {
+      margin: 0 0 2rem 0;
+      width: 100%;
+    }
+
+    &:focus {
+      background-color: rgba($light-blue, .1);
+      border-color: $light-blue;
+      color: $light-blue;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,293 @@
+.form-header {
+  color: white;
+  font-family: 'Crete Round', serif;
+  font-size: $lr-font-size;
+  font-weight: 400;
+}
+
+.form {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  @media (max-width: 46.875em) {
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  &__error {
+    color: $light-green;
+    font-family: 'Crete Round', serif;
+    font-size: $default-font-size;
+  }
+
+  &__title-input {
+    @include input-idle;
+    font-family: 'Crete Round', serif;
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    padding: 0 2rem;
+
+    @include respond-750-width {
+      grid-column: 1 / -1;
+    }
+
+    &::placeholder {
+      color: $light-gray;
+    }
+
+    &:focus {
+      @include input-focus;
+
+      &::placeholder {
+        color: $light-blue;
+      }
+    }
+  }
+
+  &__input-text-area {
+    @include input-idle;
+    font-family: 'Crete Round', serif;
+    grid-column: 1 / 7;
+    grid-row: 2 / 6;
+    line-height: 1.7;
+    padding: 2rem;
+    resize: none;
+
+    @include respond-750-width {
+      grid-column: 1 / -1;
+    }
+
+    &::placeholder {
+      color: $light-gray;
+    }
+
+    &:focus {
+      @include input-focus;
+
+      &::placeholder {
+        color: $light-blue;
+      }
+    }
+  }
+
+  .SingleDatePicker {
+    grid-column: 7 / 9;
+    grid-row: 1 / 2;
+    text-align: center;
+
+    @include respond-750-width {
+      grid-column: 1 / -1;
+      grid-row: 7 / 8;
+    }
+  }
+
+  &__hours-slept-input {
+    @include input-idle;
+    font-family: 'Crete Round', serif;
+    grid-column: 7 / 9;
+    grid-row: 4 / 5;
+    text-align: center;
+
+    @include respond-750-width {
+      grid-column: 1 / -1;
+      grid-row: 8 / 9;
+      height: 77px;
+    }
+
+    &::placeholder {
+      color: $light-gray;
+    }
+
+    &:focus {
+      @include input-focus;
+
+      &::placeholder {
+        color: $light-blue;
+      }
+    }
+  }
+
+  &__entry-type-select {
+    font-family: 'Crete Round', serif;
+    grid-column: 6 / 7;
+    grid-row: 1 / 2;
+    background-color: transparent;
+    border: 1px solid $light-gray;
+    -webkit-appearance: none;
+    -webkit-border-radius: $input-radius;
+    color: $light-gray;
+    cursor: pointer;
+    font-size: $m-font-size;
+    padding: $input-padding;
+    text-align: center;
+    transition: all .4s;
+
+    @include respond-750-width {
+      grid-column: 1 / -1;
+      grid-row: 6 / 7;
+    }
+
+    &:focus {
+      background-color: rgba($light-blue, .1);
+      border-color: $light-blue;
+      color: $light-blue;
+      outline: none;
+    }
+  }
+
+  &__entry-text-area {
+    grid-column: 1 / 7;
+    grid-row: 2 / 6;
+  }
+
+  &__slider-output {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    grid-column: 7 / 9;
+    grid-row: 3 / 4;
+    position: relative;
+      top: 3rem;
+    
+    @include respond-750-width {
+      grid-column: 1 / -1;
+      justify-content: center;
+      top: 0;
+    }
+
+    &__img {
+      width: 8.2rem; 
+
+      @include respond-750-width {
+        margin-right: 2rem;
+      }
+    }
+
+    &__value-container {
+      text-align: center;
+    }
+
+    &__value {
+      color: $white;
+      font-size: $l-font-size;
+    }
+
+    &__value-label {
+      color: $white;
+      font-size: $default-font-size;
+      font-family: 'Crete Round', serif;
+    }
+  }
+
+  &__intensity-level-slider__container {
+    grid-column: 7 / 9;
+    grid-row: 3 / 4;
+    position: relative;
+    top: 3rem;
+    text-align: center;
+    
+    @include respond-750-width {
+      grid-column: 1 / -1;
+      grid-row: 10 / 11;
+      top: 0;
+    }
+  }
+
+  &__intensity-level-slider {
+    margin-bottom: 5rem;
+    width: 100%;
+
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right, $light-blue 0%, $light-green 100%);
+    cursor: pointer;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .4s;
+    transition: all .4s;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      background: $white;
+      border: 3px solid $white;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 1rem;
+      width: 1rem;
+      -webkit-transition: .3s;
+      -moz-transition: .3;
+      transition: all .3s;
+    }
+
+    &:hover, &:focus {
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        border: 3px solid $white;
+      }
+    }
+
+    &::-moz-range-thumb {
+      appearance: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border: 3px solid $light-blue;
+      background: $lighter-blue;
+      cursor: pointer;
+    }
+
+    &__description {
+      color: $white;
+      font-family: 'Crete Round', serif;
+      font-style: italic;
+      font-size: $s-font-size;
+      position: relative;
+        bottom: 4.7rem;
+    }
+  }
+
+  &__button {
+    grid-column: 7 / 9;
+    grid-row: 5 / 6;
+
+    @include respond-750-width {
+      grid-column: 1 / -1;
+      grid-row: 11 / 12;
+    }
+  }
+}
+
+.SingleDatePickerInput {
+  align-items: center;
+  background-color: transparent !important; 
+  border: 1px solid $light-blue !important;
+  border-radius: 5px !important;
+  display: flex;
+  height: 8.6rem !important;
+  justify-content: space-around;
+}
+
+.DateRangePickerInput {
+  @media (min-width: 112.5em) {
+    padding-top: 5px !important; 
+  }
+}
+
+.DateInput__display-text {
+  @media (min-width: 112.5em) {
+    overflow: visible !important;
+  }
+}
+
+.DateInput {
+  @media (min-width: 112.5em) {
+    margin-right: 15px !important;
+  }
+}

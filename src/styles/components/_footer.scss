@@ -1,0 +1,61 @@
+.footer {
+  margin: 0 auto;
+  width: $grid-width;
+
+  @include respond-1100-width {
+    width: 100%;
+  }
+
+  &__brand {
+    width: 20rem;
+  }
+
+  &__author-text {
+    color: $white;
+    font-size: $m-font-size;
+    font-family: 'Crete Round', serif;
+  }
+
+  &__social-media a {
+    color: $white;
+    font-family: 'Crete Round', serif;
+    font-size: $m-font-size;
+    transition: all .3s;
+
+    &:nth-child(1):hover {
+      color: $light-blue;
+    }
+
+    &:nth-child(2):hover {
+      color: lighten($light-purple, 25%);
+    }
+
+    &:nth-child(3):hover {
+      color: $light-green;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__brand-container {
+    text-align: center;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: color .3s;
+
+    &:hover {
+      color: $light-green;
+    }
+  }
+}
+
+.copyright-text {
+  font-size: $s-font-size;
+  font-family: 'Crete Round', serif;
+  color: $white;
+}

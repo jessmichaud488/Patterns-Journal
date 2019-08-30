@@ -1,0 +1,110 @@
+// OVERRIDE DATE PICKER DEFAULTS
+.DateRangePickerInput,
+.DateInput {
+  background-color: transparent !important;
+}
+
+.DateInput__display-text {
+  transition: all .4s !important;
+
+  @include respond-1200-width {
+    padding: 2px 8px !important;
+  }
+}
+
+.DateRangePicker {
+  @media (max-width: 45.5em) {
+    bottom: 2.5px;
+  }
+
+  @media (max-width: 41.5625em) {
+    margin: 0 0 2rem 0 !important;
+    width: 100% !important;
+  }
+}
+
+.DateRangePickerInput {
+  border-color: $light-gray !important; 
+  border-radius: $input-radius !important;
+  height: 4.8rem !important;
+
+  @media (max-width: 41.5625em) {
+    margin: 0 0 2rem 0 !important;
+    width: 100% !important;
+  }
+
+  @media (max-width: 48.6875em) {
+    height: auto !important;
+  }
+}
+
+.DateRangePickerInput__arrow {
+  @media (max-width: 21.25em) {
+    display: block !important;
+    transform: rotate(90deg) !important;
+  }
+}
+
+.DateInput {
+  color: $light-gray !important;
+  font-size: $s-font-size !important;
+  padding: 7px !important;
+  grid-column: 7 / 9;
+  grid-row: 1 / 3;
+}
+
+.DateInput__display-text--focused {
+  background: rgba($light-blue, .1) !important;
+  border-color: rgba($light-blue, .1) !important;
+  border-radius: 3px !important;
+  color: $light-blue !important;
+}
+
+.DateRangePickerInput__arrow svg {
+  fill: $light-gray !important; 
+}
+
+.DateInput__input {
+  cursor: pointer !important;
+}
+
+.DateInput__display-text--has-input {
+  color: $light-gray !important;
+}
+
+.DayPickerKeyboardShortcuts__show--bottom-right {
+  border-right: 33px solid $light-blue !important;
+}
+
+.CalendarDay--selected-start, .CalendarDay--selected-end, .CalendarDay--selected {
+  background: $light-blue !important;
+  border: 1px double $light-blue !important;
+  color: $dark-purple !important;
+}
+
+.CalendarDay--selected-span {
+  background: lighten($light-blue, 15%) !important;
+  border: 1px double darken($light-blue, 15%) !important;
+  color: $dark-purple !important
+}
+
+.CalendarDay--hovered-span, 
+.CalendarDay--after-hovered-start {
+  background: lighten($light-blue, 15%) !important;
+  border: 1px double darken($light-blue, 15%) !important;
+  color: $dark-purple !important;
+}
+
+.DateInput__display-text--has-input {
+  color: $light-blue !important;
+}
+
+.DateRangePickerInput > div:nth-child(3) {
+  @media (max-width: 21.25em) {
+    margin-left: 5rem !important;
+  }
+}
+
+.DateRangePickerInput__clear-dates--hide {
+  visibility: visible !important;
+}

@@ -1,0 +1,169 @@
+.entry-list {
+  animation-delay: .9s;
+}
+
+.entry {
+  background: linear-gradient(to bottom right, $light-blue 0%, $dark-blue 100%);
+  font-family: 'Crete Round', serif;
+  border-radius: $input-radius;
+  color: $white;
+  cursor: pointer;
+  font-size: $default-font-size;
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-850-width {
+      flex-direction: column;
+    }
+  }
+
+  &__title-box {
+    @include respond-850-width {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+
+    @include respond-850-width {
+      font-size: $l-font-size;
+    }
+  }
+
+  &__type {
+    padding: 4px 12px;
+    background: linear-gradient(to bottom, lighten($light-purple, 30%) 0%, darken($light-purple, 15%) 100%);
+    border-radius: 10px;
+
+    @include respond-550-width {
+      width: 100%;
+    }
+  }
+
+  &__clock,
+  &__calendar,
+  &__level {
+    margin-right: $icon-space;
+  }
+
+  &__info-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 57rem;
+
+    @include respond-850-width {
+      width: 100%;
+    }
+
+    @include respond-550-width {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__info-container > div:first-child {
+
+    @include respond-550-width {
+      width: 100%;
+    }
+  }
+
+  &__info-container > div:nth-child(2), &__info-container > div:nth-child(3) {
+    width: 10rem;
+  }
+
+  &__info-container > div {
+    width: 15rem;
+
+    @media (max-width: 30.9375em) {
+      width: auto;
+    }
+
+    @media (max-width: 23.625em) {
+      text-align: center;
+    }
+
+    &:last-child {
+      @media (max-width: 23.625em) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__info-box:first-child {
+    @include respond-550-width {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all .4s ease-in-out;
+  }
+
+  &__input {
+    padding: 2rem 4rem;
+  }
+
+  &__quote {
+    position: absolute;
+      left: 1.2rem;
+  }
+
+  &__options {
+    text-align: right;
+  }
+
+  &__edit-text {
+    color: $white;
+    transition: all .2s;
+  }
+
+  &__edit, &__delete {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: $white;
+    padding: 1rem;
+    transition: all .2s;
+  }
+
+  &__edit:hover {
+    background-color: darken($light-blue, 25%);
+    border-color: $white;
+    transform: rotate(-90deg);
+  }
+
+  &__delete:hover {
+    background-color: lighten($light-purple, 10%);
+    border-color: $white;
+    transform: rotate(90deg);
+  }
+}
+
+.entry__options-text {
+  margin-right: 2rem;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.disappear {
+  opacity: 0;
+}
+
+.appear {
+  opacity: 1;
+}

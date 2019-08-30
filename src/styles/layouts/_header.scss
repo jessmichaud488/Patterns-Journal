@@ -1,0 +1,96 @@
+.header {
+  background-color: transparent;
+  position: absolute;
+    top: 1.5rem;
+  width: 100%;
+  z-index: 10;
+
+  .nav {
+    display: flex;
+    font-size: $default-font-size;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1.3rem 0;
+    width: 114rem;
+
+    @include respond-1100-width {
+      padding: 1.3rem 3rem;
+      width: 100%;
+    }
+
+    &__brand {
+      height: 2rem;
+      position: absolute;
+        top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__icon {
+      margin-right: 1rem;
+
+      @include respond-500-width {
+        margin: 0;
+      }
+    }
+
+    &__text {
+      @include respond-500-width {
+        display: none;
+      }
+    }
+
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        border: 1px solid transparent;
+        color: $white;
+        padding-bottom: .5rem;
+        text-decoration: none;
+        transition: all .2s;
+
+        @include respond-500-width {
+          padding: 1rem 1.2rem;
+        }
+      }
+
+      &:hover {
+        color: $light-blue;
+      }
+    }
+
+    &__main-links, &__home-links {
+      .nav__link:not(:last-child) {
+        margin-right: 3rem;
+
+        @include respond-500-width {
+          margin: 0;
+        }
+      }
+    }
+
+    &__link-icon {
+      &,
+      &:link,
+      &:visited {
+        @include respond-500-width {
+          border: 1px solid $white;
+          border-radius: 50%;
+          &:not(:last-child) {
+            margin-right: 1rem !important;
+          }
+        }
+      }
+        
+    }
+
+    .is-active {
+      border-bottom-color: $light-blue;
+      color: $light-blue;
+
+      @include respond-500-width {
+        border-color: $light-blue;
+      }
+    }
+  }
+}

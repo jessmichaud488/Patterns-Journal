@@ -1,0 +1,17 @@
+.main-wrapper {
+  background: radial-gradient(ellipse at bottom, $dark-blue 0%, $dark-purple 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  padding-top: 13rem;
+  margin: 0 auto;
+  width: $grid-width;
+
+  @include respond-1100-width {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 100%;
+  }
+}

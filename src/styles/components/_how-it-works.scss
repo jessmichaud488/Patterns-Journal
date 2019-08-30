@@ -1,0 +1,58 @@
+.how-it-works {
+  display: flex;
+  justify-content: space-between;
+
+  &--1 {
+    @include respond-900-width {
+      flex-direction: column;
+    }
+  }
+
+  &--2 {
+    @include respond-900-width {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__text-container {
+    padding: 4rem;
+    text-align: left;
+
+    @include respond-900-width {
+      text-align: center;
+    }
+  }
+
+  &__video {
+    width: 55rem;
+
+    @include respond-900-width {
+      width: 90%;
+    }
+  }
+
+  &__text {
+    text-align: left;
+
+    &--pre {
+      color: lighten($light-purple, 20%);
+      font-size: $s-font-size;
+      font-family: 'Crete Round', serif;
+    }
+
+    &--main {
+      color: $white;
+      font-size: $l-font-size;
+      font-family: 'Crete Round', serif;
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    &--sub {
+      color: $white;
+      font-size: $default-font-size;
+      font-family: 'Crete Round', serif;
+      text-transform: none;
+    }
+  }
+}

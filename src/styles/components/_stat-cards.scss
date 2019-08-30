@@ -1,0 +1,106 @@
+    
+.stat-cards-wrapper {
+  margin: 0 auto;
+
+  &__vertical {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-500-width {
+      flex-direction: column;
+    }
+  }
+
+  &__horizontal {
+    display: flex;
+    justify-content: center;
+
+    @include respond-500-width {
+      flex-direction: column;
+    }
+  }
+}
+
+.stat-card {
+  font-family: 'Crete Round', serif;
+  font-size: $default-font-size;
+  padding: 3rem;
+  position: relative;
+  text-transform: uppercase;
+
+  &--1 {
+    animation-delay: .3s;
+  }
+  
+  &--2 {
+    animation-delay: .6s;
+  }
+
+  &--3 {
+    animation-delay: .9s;
+  }
+
+  &--4 {
+    animation-delay: 1.2s;
+  }
+
+  &--5 {
+    animation-delay: 1.5s;
+  }
+
+  &__stat {
+    color: $white;
+    font-family: 'Crete Round', serif;
+    font-size: $xl-font-size;
+    font-weight: 500;
+  }
+
+  &__title {
+    color: $light-gray;
+  }
+
+  &__img {
+    width: 5rem;
+  }
+
+  &__img-container {
+    width: 45px;
+  }
+
+  &__img--horizontal {
+    position: absolute;
+      top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--vertical {
+    text-align: center;
+    width: 30rem;
+
+    @include respond-500-width {
+      width: 100%;
+    }
+
+    &__text-box {
+      width: 100%;
+    }
+  }
+
+  &--horizontal {
+    display: flex;
+    justify-content: center;
+    width: 31rem;
+
+    @include respond-500-width {
+      width: 100%;
+    }
+
+    &__text-box {
+      margin-right: 1.5rem;
+
+      @include respond-500-width {
+        text-align: right;
+      }
+    }
+  }
+}

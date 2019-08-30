@@ -1,0 +1,11 @@
+.entry-view-summary {
+  color: $white;
+
+  @include respond-1010-width {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: $lr-font-size;
+  }
+}
