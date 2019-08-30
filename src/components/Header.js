@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //import { connect } from "react-redux";
-import SignUpModal from "./SignInModal";
+import SignUpModal from "./SignUpModal";
+import LogInModal from "./LogInModal";
 import Modal from "react-modal";
 
 class Header extends React.Component {
@@ -28,9 +29,7 @@ class Header extends React.Component {
           <header className="header fade-in-top">
             <nav className="nav">
 
-              <Link to="/" className="nav__link"
-                img src="images/brain.png" className="nav__brand" alt="Patterns logo">
-              </Link>
+                <img src="images/brain.png" className="nav__brand" alt="Patterns logo"></img>
 
               <div className="nav__home-links">
                 <Link to ="/"
@@ -38,6 +37,12 @@ class Header extends React.Component {
                   activeclassname="is-active"
                   onClick={this.handleOpenModal}>
                   Sign Up
+                </Link>
+
+                <Link to="/logIn"
+                  className="nav__link"
+                  activeclassname="is-active">
+                  Log In
                 </Link>
 
                 <Link to="/dashboard"
@@ -52,10 +57,7 @@ class Header extends React.Component {
           <header className="header fade-in-top">
             <nav className="nav">
 
-              <Link to="/"
-                className="nav__link">
                 <img src="images/brain.png" className="nav__brand" alt="Patterns logo" />
-              </Link>
 
               <div className="nav__main-links">
                 <Link to="/dashboard"
@@ -87,6 +89,12 @@ class Header extends React.Component {
           </header>
         )}
         <SignUpModal
+          isOpen={this.state.showModal}
+          onRequestClose={this.handleCloseModal}
+          handleCloseModal={this.handleCloseModal}
+        />
+
+        <LogInModal
           isOpen={this.state.showModal}
           onRequestClose={this.handleCloseModal}
           handleCloseModal={this.handleCloseModal}

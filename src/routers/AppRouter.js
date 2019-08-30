@@ -9,16 +9,25 @@ import Stats from "../components/Stats";
 import Charts from "../components/Charts";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function AppRouter() {
+class AppRouter extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      user: {}
+    };
+  }
+
+  render() {
   return (
     <BrowserRouter>
     <div className="main-wrapper">
       <Route exact path="/" component={HomePage} />
       <Route exact path="/" component={Header} />
-      <Route exact path="/dashboard" component={DashboardPage} />
+      <Route exact path="/dashboard" render={ ()=><DashboardPage user={this.state.user}/> } />
     </div>
     </BrowserRouter>
   );
+  }
 }
 
 export default AppRouter;
