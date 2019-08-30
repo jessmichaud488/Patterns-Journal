@@ -31,7 +31,7 @@ class LogInModal extends React.Component {
                 Thank you for logging in. One moment please.
               </p>
               <img
-                src="LOGO"
+                src="../images/brain.png"
                 className="beta-form__brand u-margin-bottom-small"
                 alt="LOGO"
               />
@@ -44,6 +44,12 @@ class LogInModal extends React.Component {
                 type="email"
                 className="beta-form__input u-margin-bottom-small"
                 placeholder="Your e-mail"
+                required
+              />
+              <input
+                type="password"
+                className="beta-form__input u-margin-bottom-small"
+                placeholder="Your password"
                 required
               />
               <button className="beta-form__button">

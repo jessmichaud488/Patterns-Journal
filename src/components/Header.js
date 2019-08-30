@@ -34,7 +34,7 @@ class Header extends React.Component {
                 </Link>
 
                 <div className="nav__home-links">
-                <Link to ="/"
+                <Link to ="/SignUp"
                   className="nav__link"
                   activeclassname="is-active"
                   onClick={this.handleOpenModal}>
@@ -43,7 +43,8 @@ class Header extends React.Component {
 
                 <Link to="/logIn"
                   className="nav__link"
-                  activeclassname="is-active">
+                  activeclassname="is-active"
+                  onClick={this.handleOpenModal}>
                   Log In
                 </Link>
 
