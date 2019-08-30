@@ -32,7 +32,7 @@ class SignUpModal extends React.Component {
                 is ready.
               </p>
               <img
-                src="LOGO"
+                src="../images/brain.png"
                 className="beta-form__brand u-margin-bottom-small"
                 alt="LOGO"
               />

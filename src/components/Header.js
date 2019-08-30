@@ -24,7 +24,6 @@ class Header extends React.Component {
     // Return different navigation between home page and demo
     return (
       <div className="header-wrapper">
-        header here
         {window.location.pathname === "/" ? (
           <header className="header fade-in-top">
             <nav className="nav">
