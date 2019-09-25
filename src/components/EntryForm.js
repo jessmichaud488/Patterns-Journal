@@ -165,7 +165,7 @@ class EntryForm extends React.Component {
           <div className="form__slider-output">
             <div className="form__slider-output__img-container">
               <img
-                src="images/swtich.png"
+                src={require('../images/switch.png')} 
                 alt="mood intensity icon"
                 className="form__slider-output__img"
               />

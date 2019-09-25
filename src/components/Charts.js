@@ -121,6 +121,7 @@ class Charts extends React.Component {
     /*fetch (
     mongodb+srv://me:Theoandmuffin!1@cluster0-lwkpm.mongodb.net/test?retryWrites=true&w=majority
     )*/
+    console.log('Made it to Will Mount in Chart.js');
     const entryData = this.state.entryTypeChartData.datasets[0].data;
     const entryTypes = this.state.entryTypeChartTotals;
     entryData.push(
@@ -130,6 +131,7 @@ class Charts extends React.Component {
     );
   }
   render() {
+    console.log('Made it to render in Chart.js');
     return (
       <div className="charts-container u-margin-bottom-big fade-in-bottom">
         <div className="chart chart--line-container">

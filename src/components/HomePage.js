@@ -42,7 +42,7 @@ export class HomePage extends React.Component {
           </div>
           <div className="section--two__cards u-margin-bottom-medium">
             <div className="card">
-              <img src="../images/check.png" alt="Convenience" className="img card--1-img" />
+              <img src={require('../images/check.png')}  alt="Convenience" className="img card--1-img" />
               <div className="card__text-box">
                 <p className="card__main-text u-margin-bottom-small">
                   Convenience
@@ -55,7 +55,7 @@ export class HomePage extends React.Component {
             </div>
             <div className="card">
               <img
-                src="../images/patterns.png"
+                src={require('../images/patterns.png')}
                 alt="Understand Patterns"
                 className="img card--2-img"
               />
@@ -70,7 +70,7 @@ export class HomePage extends React.Component {
             </div>
             <div className="card">
               <img
-                src="../images/communication.png"
+                src={require('../images/communication.png')}
                 alt="Better Communication"
                 className="img card--3-img"
               />

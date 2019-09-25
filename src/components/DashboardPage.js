@@ -4,14 +4,30 @@ import Charts from "./Charts";
 import AddEntryPage from "./AddEntryPage";
 
 class DashboardPage extends React.Component {
-  /*constructor(props) {
+  constructor(props) {
     super(props);
-  }*/
+    this.state = {
+      entries: []
+    }
+  }
+
+  componentDidMount() {
+    console.log('fetching data from entry router');
+    fetch('http://localhost:8080/entryrouter')
+      .then(res => {
+          console.log("dashboard page -", res);
+          return res.json()
+       })
+      .then(entries => { 
+          console.log("dashboard page -", entries); 
+          this.setState({ entries })
+       });
+   }
+
   render() {
     return (
       <div>
-        <Charts />
-        <AddEntryPage />
+        <p>hello dashboard</p>
       </div>
     );
   }

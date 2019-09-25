@@ -84,6 +84,11 @@
         
     }
 
+    .nav__brand {
+      height: 65px;
+      width: 65px;
+    }
+
     .is-active {
       border-bottom-color: $light-blue;
       color: $light-blue;

@@ -5,13 +5,25 @@ import EntryListFilters from "./EntryListFilters";
 import EntryViewSummary from "./EntryViewSummary";
 
 class EntriesPage extends React.Component {
-  /*constructor(props) {
+  constructor(props) {
     super(props);
-  }*/
-  componentDidMount() {
-    // This fixes the bottom spacing issue that the moving stars background causes
-    this.refs.wrapper.style.minHeight = window.innerHeight + "px";
+    this.state = {
+      entries: []
+    }
   }
+  
+  componentDidMount() {
+    fetch('/entryrouter')
+      .then(res => {
+          console.log(res);
+          return res.json()
+       })
+      .then(entries => { 
+          console.log(entries); 
+          this.setState({ entries })
+       });
+   }
+
   render() {
     return (
       <div className="wrapper" ref="wrapper">
