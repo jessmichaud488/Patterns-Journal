@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
+//import { connect } from "react-redux";
 import { Line, Doughnut } from "react-chartjs-2";
 import moment from "moment";
 
@@ -151,8 +151,8 @@ class Charts extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
+/*const mapStateToProps = state => ({
   entries: state.entries
-});
+});*/
 
 export default Charts;

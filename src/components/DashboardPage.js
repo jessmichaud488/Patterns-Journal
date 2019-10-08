@@ -1,7 +1,7 @@
 import React from "react";
-import Charts from "./Charts";
+//import Charts from "./Charts";
 //import Stats from "./Stats";
-import AddEntryPage from "./AddEntryPage";
+//import AddEntryPage from "./AddEntryPage";
 
 class DashboardPage extends React.Component {
   constructor(props) {

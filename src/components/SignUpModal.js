@@ -4,7 +4,6 @@ import Modal from 'react-modal'
 class SignUpModal extends React.Component {
   constructor(props) {
     super(props)
-    this.handleSignUpFormSubmit = this.handleSignUpFormSubmit.bind(this)
     this.state = {
       formSubmitted: false
     }
@@ -25,7 +24,7 @@ class SignUpModal extends React.Component {
         {this.state.formSubmitted ? 
           <div className="beta-form__container">
               <p className="beta-form__text u-margin-top-small u-margin-bottom-small">Thank you for signing up for your Patterns Journal! Because your privacy is important to us, you will receive an email shortly to complete your registration. Journal on!</p> 
-              <img src={require('../images/brain.png')} className="beta-form__brand u-margin-bottom-small" alt="Patterns logo"/>
+              <img src={require('../images/logo.png')} className="beta-form__brand u-margin-bottom-small" alt="Patterns logo"/>
           </div>
             : 
             <div className="beta-form__container">

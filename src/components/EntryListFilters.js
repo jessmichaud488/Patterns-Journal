@@ -2,7 +2,7 @@ import React from "react";
 //import ReactDOM from "react-dom";
 //import { connect } from "react-redux";
 import "react-dates/initialize";
-import { DateRangePicker } from "react-dates";
+//import { DateRangePicker } from "react-dates";
 /*import {
   //setEntryFilter,
   //setTextFilter,

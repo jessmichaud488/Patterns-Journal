@@ -1,11 +1,18 @@
-import React from "react";
+import React, { Component } from 'react'
 import moment from "moment";
-import AppRouter from "./routers/AppRouter";
-import configureStore from "./store/configureStore";
-import { addEntry } from "./actions/entries";
+import configureStore from "./store/configureStore"
+import { addEntry } from "./actions/entries"
 //import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 import "react-dates/lib/css/_datepicker.css";
+import AddEntryPage from '../src/components/AddEntryPage'
+import EntriesPage from '../src/components/EntriesPage'
+import DashboardPage from '../src/components/DashboardPage'
+import EditEntryPage from '../src/components/EditEntryPage'
+import Header from '../src/components/Header'
+import { HomePage } from '../src/components/HomePage'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 const store = configureStore();
 
 const now = moment.now();
@@ -142,8 +149,24 @@ store.dispatch(
   })
 );
 
-function App() {
-  return <AppRouter />;
+class App extends Component {
+
+render () {
+return ( 
+<BrowserRouter>
+<div className="main-wrapper">
+<Header />
+<Switch>
+  <Route exact path="/" component={HomePage} />
+  <Route path="/dashboard" component={DashboardPage} />
+  <Route path="/entries" component={EntriesPage} />
+  <Route path="/create" component={AddEntryPage} />
+  <Route path="/entries/:id" component={EditEntryPage} />
+</Switch>
+</div>
+</BrowserRouter>
+    )
+  }
 }
 
-export default App;
+export default App

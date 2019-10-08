@@ -1,7 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
+//import { connect } from "react-redux";
 import EntryForm from "./EntryForm";
-import { editEntry } from "../actions/entries";
+//import { editEntry } from "../actions/entries";
 
 class EditEntryPage extends React.Component {
 
@@ -19,12 +19,12 @@ class EditEntryPage extends React.Component {
   }
 }
 
-const mapStateToProps = (state, props) => ({
+/*const mapStateToProps = (state, props) => ({
   entry: state.entries.find(entry => entry.id === props.match.params.id)
 });
 
 const mapDispatchToProps = dispatch => ({
   editEntry: (id, entry) => dispatch(editEntry(id, entry))
-});
+});*/
 
 export default EditEntryPage;

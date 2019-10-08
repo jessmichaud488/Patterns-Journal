@@ -4,7 +4,6 @@ import Modal from 'react-modal'
 class LogInModal extends React.Component {
   constructor(props) {
     super(props)
-    this.handleLogInFormSubmit = this.handleLogInFormSubmit.bind(this)
     this.state = {
       formSubmitted: false
     }
@@ -21,11 +20,11 @@ class LogInModal extends React.Component {
         onRequestClose={this.props.onRequestClose}
         handleCloseLogInModal={this.props.handleCloseLogInModal}
       >
-        <form className="beta-form" onSubmit={this.handleLogInFormSubmit}>
+        <form className="beta-form" onSubmit={this.handleCloseLogInModal}>
         {this.state.formSubmitted ? 
           <div className="beta-form__container">
               <p className="beta-form__text u-margin-top-small u-margin-bottom-small">Please wait while we log you into your account.</p> 
-              <img src={require('../images/brain.png')} className="beta-form__brand u-margin-bottom-small" alt="Patterns logo"/>
+              <img src={require('../images/logo.png')} className="beta-form__brand u-margin-bottom-small" alt="Patterns logo"/>
           </div>
             : 
             <div className="beta-form__container">
@@ -33,13 +32,12 @@ class LogInModal extends React.Component {
               <p className="beta-form__text u-margin-bottom-small">Welcome back, happy to see you again!</p>
               <input type="email" className="beta-form__input u-margin-bottom-small" placeholder="Your email" required />
               <input type="password" className="beta-form__input u-margin-bottom-small" placeholder="Your password" required />
-              <button className="beta-form__button">
+              <button type="submit" className="beta-form__button">
                 <i className="fab fa-telegram-plane"></i> Send Request
               </button>
             </div>
-          }      
-        </form>
-        <button onClick={this.props.handleCloseLogInModal} className="beta-form__close"><i className="fas fa-times"></i></button>
+          }  
+          </form>  
       </Modal>
     )
   }

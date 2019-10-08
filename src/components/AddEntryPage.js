@@ -17,8 +17,8 @@ export class AddEntryPage extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+/*const mapDispatchToProps = dispatch => ({
   addEntry: entry => dispatch(addEntry(entry))
-});
+});*/
 
 export default AddEntryPage;
