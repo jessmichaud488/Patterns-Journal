@@ -162,6 +162,8 @@ return (
   <Route path="/entries" component={EntriesPage} />
   <Route path="/create" component={AddEntryPage} />
   <Route path="/entries/:id" component={EditEntryPage} />
+  <Route path="/logIn" component={LogIn} />
+  <Route path="/signUp" component={SignUp} />
 </Switch>
 </div>
 </BrowserRouter>
