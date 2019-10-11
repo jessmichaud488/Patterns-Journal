@@ -7,6 +7,9 @@ import LogInModal from './LogInModal'
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handPasswordChange = this.handlePasswordChange.bind(this);
+
     this.handleOpenLogInModal = this.handleOpenLogInModal.bind(this);
     this.handleCloseLogInModal = this.handleCloseLogInModal.bind(this);
 
@@ -14,12 +17,29 @@ class Header extends React.Component {
     this.handleCloseSignUpModal = this.handleCloseSignUpModal.bind(this);
     // Config for sign up modal
     this.state = {
+      email: '',
+      password: '',
       showLogInModal: false,
       showSignUpModal: false
     }
   }
 
-  handleLogInFormSubmit(e) {
+  handleEmailChange(e) {
+    e.preventDefault()
+    console.log('Email =', e.target.value)
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+  handlePasswordChange(e) {
+    e.preventDefault()
+    console.log('Password =', e.target.value)
+    this.setState({
+      password: e.target.value
+    });
+  }
+  /*handleLogInFormSubmit(e) {
     e.preventDefault()
     debugger
     this.setState(({ formSubmitted: true }))
@@ -28,14 +48,16 @@ class Header extends React.Component {
   handleSignUpFormSubmit(e) {
     e.preventDefault()
     this.setState(({ formSubmitted: true }))
-  }
+  }*/
   
-  handleOpenLogInModal() {
+  handleOpenLogInModal(e) {
+    e.preventDefault()
     console.log("handleOpenLogIn")
     this.setState({ showLogInModal: true })
   }
 
-  handleOpenSignUpModal() {
+  handleOpenSignUpModal(e) {
+    e.preventDefault()
     console.log("handleOpenSignUp")
     this.setState({ showSignUpModal: true })
   }
@@ -84,13 +106,19 @@ class Header extends React.Component {
           </header>
         }
         <SignUpModal
+          handleEmailChange={this.state.handleEmailChange}
+          handlePasswordChange={this.state.handlePasswordChange}
           isOpen={this.state.showSignUpModal}
           onRequestClose={this.handleCloseSignUpModal}
           handleCloseSignUpModal={this.handleCloseSignUpModal}
-          handleLogInFormSubmit={this.handleLogInFormSubmit}
+          //handleLogInFormSubmit={this.handleLogInFormSubmit}
         />
 
         <LogInModal
+          email={this.state.email}
+          password={this.state.password}
+          handleEmailChange={this.state.handleEmailChange}
+          handlePasswordChange={this.state.handlePasswordChange}
           isOpen={this.state.showLogInModal}
           onRequestClose={this.handleCloseLogInModal}
           handleCloseLogInModal={this.handleCloseLogInModal}
